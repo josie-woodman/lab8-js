@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang-= "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name= "viewport" content="width=device">
+        <meta >
+    </head>
+
+        <body>
+            <div>
+                <h1>0</h1>
+                <input type="text">
+                <button>+</button>
+            </div>
+
+    <script>
+
+        const calc = {
+            addBtn: document.querySelector('button'), //grabbing button
+            inputTxt: document.querySelector('input') , //grabbing the input
+            h1: document.querySelector('h1'), //grabbing the h1 tag
+            total: 0, //declaring/running the total
+
+            init() { //this means "init: function() {   }"
+                this.addBtn,addEventListener('click', this.add.bind(this)) //listening for click event on add button
+                console.log('add this is running');
+            },
+            add() { 
+                //add "2" into the total (store the new value)
+                this.total += Number(this.inputTxt.value); //the += means: this.total = this.total + inputTxt.value;
+                console.log(typeof this.total);
+
+                //display updated question
+                this.h1.textContent = this.total;
+
+                //clear input field
+                this.inputTxt.value = '';  //or null
+
+            },
+
+        };
+
+        calc.init();
+    </script>
+
+
+
+
+
+
+</html>
